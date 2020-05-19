@@ -1,0 +1,24 @@
+{
+  "name": "Unsplash",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.19.0",
+    "circular-json": "^0.5.9",
+    "express": "^4.17.1",
+    "livereload": "^0.9.1",
+    "node-fetch": "^2.6.0",
+    "unsplash-js": "^6.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "dev": "nodemon ./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

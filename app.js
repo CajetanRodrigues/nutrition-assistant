@@ -2,8 +2,10 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser')
-app.use(bodyParser.json());
+var cors = require('cors')
 
+app.use(bodyParser.json());
+app.use(cors())
 const toJson = require('unsplash-js').toJson;
 const fetch = require('node-fetch');
 global.fetch = fetch;

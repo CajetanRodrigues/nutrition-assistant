@@ -49,7 +49,8 @@ app.get('/search/:term', function (req, res) {
     tempObj = {}
     tempObj["name"] = foodItem.description
     tempObj["image"] = json.results[0].urls.raw
-
+    tempObj["fdcId"] = foodItem.fdcId
+    tempObj["quantity"] = 0
     foodItem.foodNutrients.forEach((nutrient) => {
       if(nutrient.nutrientName === 'Protein' && nutrient.unitName === 'G') {
         tempObj['proteins'] = {

@@ -23,6 +23,17 @@ const axios = require('axios');
 CircularJSON = require('circular-json')
 
 
+
+app.get('/image/:name', function(req,res) {
+    unsplash.search.photos(req.params.name, 1, 1, { orientation: "portrait" })
+    .then(toJson) 
+    .then(json => {
+        console.log(JSON.stringify(json))
+        image_url = json.results[0].urls.raw
+        res.send(json)
+    })
+  })
+
 app.get('/search/:term', function (req, res) { 
   
     console.log(req.body.search)
